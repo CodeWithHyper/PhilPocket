@@ -27,15 +27,19 @@ The data used in this dashboard is synthetic but statistically modeled to reflec
 
 **Step 1: Install Dependencies**\
 Open your terminal or command prompt and install the required Python libraries:
-- pip install pandas flask flask-cors
+
+`pip install pandas flask flask-cors`
 
 **Step 2: Generate Data**\
 Run the generator script to create the synthetic patient database (ph_healthcare_data.csv):
-- python data_generator.py
+
+`python data_generator.py`
 
 **Step 3: Start the Backend Server**\
 Run the Flask API server. Keep this terminal window OPEN while using the dashboard.
-- python app.py
+
+`python app.py`
+
 You should see a message saying Running on http://127.0.0.1:5000.
 
 **Step 4: Launch the Dashboard**\
