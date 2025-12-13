@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhilPocket</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="ppocket.png" type="x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="logo-section">
+          <div class="logo-content">
+            <img src="ppocket.png" alt="" width="45" />
+            <span class="logo-text">PhilPocket</span>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li onclick="switchPage('overview', this)" class="nav-item active">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              ></path></svg
+            ><span class="nav-link-text">Overview</span>
+          </li>
+          <li onclick="switchPage('explorer', this)" class="nav-item">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path></svg
+            ><span class="nav-link-text">OOP Explorer</span>
+          </li>
+          <li onclick="switchPage('services', this)" class="nav-item">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+              ></path></svg
+            ><span class="nav-link-text">Services</span>
+          </li>
+          <li onclick="switchPage('insurance', this)" class="nav-item">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path></svg
+            ><span class="nav-link-text">Insurance</span>
+          </li>
+          <li onclick="switchPage('patients', this)" class="nav-item">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path></svg
+            ><span class="nav-link-text">Patients</span>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="top-bar">
+          <div class="header-left">
+            <div class="header-title">
+              <h1 id="page-title">Overview</h1>
+              <p id="page-subtitle">Executive Summary</p>
+            </div>
+          </div>
+
+          <!-- Updated Header Right: Search + Actions -->
+          <div class="header-right">
+            <div class="search-container">
+              <svg
+                class="search-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search Patient ID or Service..."
+                onkeyup="handleFilterChange()"
+              />
+            </div>
+
+            <!-- Theme Toggle Button -->
+            <button
+              class="icon-btn"
+              id="theme-toggle"
+              aria-label="Toggle Dark Mode"
+            >
+              <svg
+                id="toggle-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Notification Button -->
+            <button class="icon-btn notification-badge" title="Notifications">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                width="20"
+                height="20"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="content-body">
+          <!-- Controls Bar with Filters (Global) -->
+          <div class="controls-bar">
+            <div class="filter-group">
+              <select
+                id="riskFilter"
+                class="filter-select"
+                onchange="handleFilterChange()"
+              >
+                <option value="all">All Risk Levels</option>
+                <option value="High">High Risk</option>
+                <option value="Moderate">Moderate Risk</option>
+                <option value="Low">Low Risk</option>
+              </select>
+              <select
+                id="serviceFilter"
+                class="filter-select"
+                onchange="handleFilterChange()"
+              >
+                <option value="all">All Services</option>
+                <option value="Surgery/Procedures">Surgery</option>
+                <option value="Emergency Room">Emergency</option>
+                <option value="Pharmacy/Meds">Pharmacy</option>
+                <option value="Consultations">Consultations</option>
+                <option value="Inpatient Care">Inpatient</option>
+              </select>
+            </div>
+            <button onclick="refreshDashboard()" class="btn-refresh">
+              Refresh Data
+            </button>
+          </div>
+
+          <!-- PAGE 1: OVERVIEW -->
+          <section id="overview" class="page-section active">
+            <!-- KPI Cards -->
+            <div class="grid-4">
+              <div class="card">
+                <div class="metric-info">
+                  <p class="metric-label">Total Billed Amount</p>
+                  <h2 class="metric-value" id="totalBillDisplay">...</h2>
+                </div>
+              </div>
+              <div class="card">
+                <div class="metric-info">
+                  <p class="metric-label text-success">Insurance Covered</p>
+                  <h2
+                    class="metric-value text-success"
+                    id="totalInsuranceDisplay"
+                  >
+                    ...
+                  </h2>
+                </div>
+              </div>
+              <div class="card">
+                <div class="metric-info">
+                  <p class="metric-label text-danger">Out-of-Pocket (OOP)</p>
+                  <h2 class="metric-value text-danger" id="totalOOPDisplay">
+                    ...
+                  </h2>
+                </div>
+              </div>
+              <div class="card">
+                <div class="metric-info">
+                  <p class="metric-label text-info">Avg OOP %</p>
+                  <h2 class="metric-value text-info" id="avgOOPPercentDisplay">
+                    ...
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overview Charts Grid -->
+            <div class="grid-2">
+              <div class="card">
+                <h3>Service Category Overview</h3>
+                <p class="card-sub">Quick view of Service Expenses</p>
+                <div class="chart-wrapper">
+                  <canvas id="overviewServiceChart"></canvas>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Cost Distribution</h3>
+                <p class="card-sub">Overview of patient cost burden</p>
+                <div class="chart-wrapper">
+                  <canvas id="overviewDistributionChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overview Bottom Row -->
+            <div
+              class="grid-balanced"
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                margin-bottom: 32px;
+              "
+            >
+              <div class="card">
+                <h3>Insurance Plans</h3>
+                <p class="card-sub">Performance Summary</p>
+                <div class="chart-wrapper">
+                  <canvas id="overviewPlanChart"></canvas>
+                </div>
+              </div>
+              <div class="table-container">
+                <div class="table-header">
+                  <h3>Top High Risk Patients</h3>
+                </div>
+                <div class="responsive-table">
+                  <table id="overviewTable">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Service</th>
+                        <th class="text-danger">OOP</th>
+                        <th>Flag</th>
+                      </tr>
+                    </thead>
+                    <tbody id="overviewTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAGE 2: EXPLORER -->
+          <section id="explorer" class="page-section">
+            <div class="grid-1">
+              <div class="card">
+                <h3>Cost Distribution Analysis</h3>
+                <p class="card-sub">
+                  Count of Patients by Out-of-Pocket Expenditure Range
+                </p>
+                <div class="chart-wrapper">
+                  <canvas id="distributionChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAGE 3: SERVICES -->
+          <section id="services" class="page-section">
+            <div class="grid-1">
+              <div class="card">
+                <h3>Service Category Insights</h3>
+                <p class="card-sub">
+                  Comparing Insurance vs. OOP by Department/Service
+                </p>
+                <div class="chart-wrapper">
+                  <canvas id="stackedBarChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAGE 4: INSURANCE -->
+          <section id="insurance" class="page-section">
+            <div class="grid-1">
+              <div class="card">
+                <h3>Insurance Plan Performance</h3>
+                <p class="card-sub">
+                  Average Patient Out-of-Pocket Cost by Plan
+                </p>
+                <div class="chart-wrapper">
+                  <canvas id="planChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAGE 5: PATIENTS -->
+          <section id="patients" class="page-section">
+            <div class="table-container">
+              <div class="table-header">
+                <h3>Full Patient Ledger</h3>
+              </div>
+              <div class="responsive-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <!-- Add onclick events here -->
+                      <th onclick="toggleSort('Patient_ID')" id="th-Patient_ID">
+                        <div class="th-content">
+                          <span>Patient ID</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th
+                        onclick="toggleSort('Service_Category')"
+                        id="th-Service_Category"
+                      >
+                        <div class="th-content">
+                          <span>Service</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th
+                        onclick="toggleSort('Insurance_Plan')"
+                        id="th-Insurance_Plan"
+                      >
+                        <div class="th-content">
+                          <span>Plan</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th
+                        onclick="toggleSort('Out_Of_Pocket')"
+                        id="th-Out_Of_Pocket"
+                      >
+                        <div class="th-content">
+                          <!-- REMOVED text-danger from th class, instead colored span below -->
+                          <span class="text-danger">OOP Amount</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <!-- UPDATED: Fixed id to match risk column sort -->
+                      <th onclick="toggleSort('Risk')" id="th-Risk">
+                        <div class="th-content">
+                          <span>Risk Flag</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="transactionsTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript Logic (Unchanged, except ID references) -->
+    <script src="script.js"></script>
+  </body>
+</html>
