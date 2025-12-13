@@ -63,6 +63,61 @@ async function fetchStatsFromBackend() {
   return data;
 }
 
+// Function to skip fetch on Github pages to avoid blocking errors
+// If this is viewed on github pages, it should display a mock data
+async function fetchStatsFromBackend() {
+  const isLocalhost =
+    window.location.hostname === "127.0.0.1" ||
+    window.location.hostname === "localhost";
+
+  if (!isLocalhost) {
+    console.warn(
+      "Running on GitHub Pages - Skipping backend fetch and using Mock Data."
+    );
+    return generateMockData();
+  }
+
+  try {
+    const response = await fetch("http://127.0.0.1:5000/api/stats");
+    if (!response.ok) throw new Error("Backend not found");
+    return await response.json();
+  } catch (e) {
+    console.warn("Backend unavailable - Using Mock Data");
+    return generateMockData();
+  }
+}
+
+function generateMockData() {
+  let mock = [];
+  const services = [
+    "Surgery/Procedures",
+    "Emergency Room",
+    "Pharmacy/Meds",
+    "Consultations",
+    "Inpatient Care",
+  ];
+  const plans = [
+    "PhilHealth Only",
+    "Maxicare",
+    "Intellicare",
+    "Medicard",
+    "None (Cash)",
+  ];
+  for (let i = 0; i < 50; i++) {
+    let bill = Math.floor(Math.random() * 50000) + 1000;
+    let oop = Math.floor(bill * Math.random());
+    mock.push({
+      Patient_ID: `PT-${1000 + i}`,
+      Service_Category: services[Math.floor(Math.random() * services.length)],
+      Insurance_Plan: plans[Math.floor(Math.random() * plans.length)],
+      Total_Bill: bill,
+      Insurance_Cover: bill - oop,
+      Out_Of_Pocket: oop,
+    });
+  }
+  return mock;
+}
+
 // Table sorter
 function toggleSort(column) {
   if (currentSort.column === column) {
