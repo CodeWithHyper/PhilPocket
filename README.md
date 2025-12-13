@@ -25,3 +25,28 @@ This project was developed for the Health Informatics subject to demonstrate:
 - Data Sampling Techniques: Implementing Slovin's formula logic via random sampling.
 - Health Data Visualization: Converting raw ledger data into actionable insights.
 - System Architecture: Understanding the decoupled relationship between a statistical backend (Python) and a user-facing frontend (Web).
+## How to Run
+**Prerequisites:**
+- Python 3.x installed on your system.
+- Web Browser (Chrome, Edge, Firefox, etc.).
+
+**Step 1: Install Dependencies**\
+Open your terminal or command prompt and install the required Python libraries:
+- pip install pandas flask flask-cors
+
+**Step 2: Generate Data**\
+Run the generator script to create the synthetic patient database (ph_healthcare_data.csv):
+- python data_generator.py
+
+**Step 3: Start the Backend Server**\
+Run the Flask API server. Keep this terminal window OPEN while using the dashboard.
+- python app.py
+You should see a message saying Running on http://127.0.0.1:5000.
+
+**Step 4: Launch the Dashboard**\
+Simply double-click the dashboard.html (or index.html) file to open it in your web browser.
+
+## Author
+David Erwin Valdepeña\
+BS Information Technology\
+Technological University of the Philippines Manila
