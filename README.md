@@ -20,11 +20,6 @@ The data used in this dashboard is synthetic but statistically modeled to reflec
 - Visualization: Chart.js library for interactive graphs.
 - Backend: Python (Flask) for statistical processing and API endpoints.
 - Data Handling: Pandas library for CSV manipulation and sampling.
-## Academic Context
-This project was developed for the Health Informatics subject to demonstrate:
-- Data Sampling Techniques: Implementing Slovin's formula logic via random sampling.
-- Health Data Visualization: Converting raw ledger data into actionable insights.
-- System Architecture: Understanding the decoupled relationship between a statistical backend (Python) and a user-facing frontend (Web).
 ## How to Run
 **Prerequisites:**
 - Python 3.x installed on your system.
