@@ -1,151 +1,151 @@
 Patient_ID,Service_Category,Insurance_Plan,Total_Bill,Insurance_Cover,Out_Of_Pocket
-PT-1000,Pharmacy/Meds,None (Cash),3711,0,3711
-PT-1001,Pharmacy/Meds,PhilHealth Only,3888,1454,2434
-PT-1002,Consultations,PhilHealth Only,1413,397,1016
-PT-1003,Diagnostics/Lab,Intellicare,7694,6836,858
-PT-1004,Emergency Room,PhilHealth Only,18649,6441,12208
-PT-1005,Inpatient Care,PhilHealth Only,29252,10617,18635
-PT-1006,Diagnostics/Lab,Intellicare,7989,6862,1127
-PT-1007,Inpatient Care,None (Cash),33466,0,33466
-PT-1008,Inpatient Care,PhilHealth Only,37670,14424,23246
-PT-1009,Diagnostics/Lab,Intellicare,5868,5676,192
-PT-1010,Inpatient Care,PhilHealth Only,26233,10238,15995
-PT-1011,Consultations,None (Cash),1297,0,1297
-PT-1012,Emergency Room,None (Cash),15598,0,15598
-PT-1013,Inpatient Care,PhilHealth Only,26370,9303,17067
-PT-1014,Emergency Room,Intellicare,17470,16243,1227
-PT-1015,Diagnostics/Lab,None (Cash),5473,0,5473
-PT-1016,Consultations,PhilHealth Only,1467,295,1172
-PT-1017,Pharmacy/Meds,PhilHealth Only,2963,955,2008
-PT-1018,Consultations,PhilHealth Only,1252,265,987
-PT-1019,Pharmacy/Meds,Medicard,3003,2885,118
-PT-1020,Emergency Room,PhilHealth Only,19408,7702,11706
-PT-1021,Pharmacy/Meds,PhilHealth Only,2962,762,2200
-PT-1022,Inpatient Care,Intellicare,25078,21627,3451
-PT-1023,Inpatient Care,PhilHealth Only,25020,7046,17974
-PT-1024,Inpatient Care,PhilHealth Only,29468,9452,20016
-PT-1025,Inpatient Care,PhilHealth Only,37254,12500,24754
-PT-1026,Pharmacy/Meds,Intellicare,2708,2539,169
-PT-1027,Surgery/Procedures,Medicard,78908,70748,8160
-PT-1028,Diagnostics/Lab,PhilHealth Only,5688,1657,4031
-PT-1029,Surgery/Procedures,PhilHealth Only,67970,15468,52502
-PT-1030,Emergency Room,Maxicare,24215,23707,508
-PT-1031,Pharmacy/Meds,Maxicare,3133,2825,308
-PT-1032,Consultations,PhilHealth Only,1134,293,841
-PT-1033,Consultations,Medicard,1469,1424,45
-PT-1034,Inpatient Care,PhilHealth Only,25660,8557,17103
-PT-1035,Diagnostics/Lab,None (Cash),7481,0,7481
-PT-1036,Emergency Room,None (Cash),19001,0,19001
-PT-1037,Consultations,None (Cash),1311,0,1311
-PT-1038,Consultations,PhilHealth Only,1141,277,864
-PT-1039,Emergency Room,PhilHealth Only,18924,5803,13121
-PT-1040,Diagnostics/Lab,PhilHealth Only,6352,2035,4317
-PT-1041,Inpatient Care,PhilHealth Only,29172,5954,23218
-PT-1042,Surgery/Procedures,PhilHealth Only,71443,25446,45997
-PT-1043,Pharmacy/Meds,None (Cash),3063,0,3063
-PT-1044,Diagnostics/Lab,Medicard,6267,6071,196
-PT-1045,Surgery/Procedures,Maxicare,56173,54599,1574
-PT-1046,Emergency Room,Intellicare,20534,20070,464
-PT-1047,Pharmacy/Meds,None (Cash),3533,0,3533
-PT-1048,Consultations,Maxicare,1262,1135,127
-PT-1049,Pharmacy/Meds,PhilHealth Only,3468,1348,2120
-PT-1050,Emergency Room,PhilHealth Only,15489,5331,10158
-PT-1051,Inpatient Care,Medicard,37035,35698,1337
-PT-1052,Emergency Room,Medicard,21300,20461,839
-PT-1053,Diagnostics/Lab,Medicard,6307,5822,485
-PT-1054,Consultations,Intellicare,1128,1013,115
-PT-1055,Inpatient Care,None (Cash),28860,0,28860
-PT-1056,Diagnostics/Lab,Maxicare,5517,4825,692
-PT-1057,Emergency Room,Intellicare,15629,14504,1125
-PT-1058,Diagnostics/Lab,PhilHealth Only,7407,1838,5569
-PT-1059,Emergency Room,PhilHealth Only,19494,4245,15249
-PT-1060,Pharmacy/Meds,Maxicare,2976,2756,220
-PT-1061,Diagnostics/Lab,None (Cash),6143,0,6143
-PT-1062,Pharmacy/Meds,Maxicare,4437,3815,622
-PT-1063,Emergency Room,PhilHealth Only,18569,5816,12753
-PT-1064,Pharmacy/Meds,Intellicare,2581,2357,224
-PT-1065,Pharmacy/Meds,Medicard,3699,3588,111
-PT-1066,Consultations,PhilHealth Only,1201,410,791
-PT-1067,Emergency Room,Intellicare,16459,16448,11
-PT-1068,Pharmacy/Meds,None (Cash),3516,0,3516
-PT-1069,Surgery/Procedures,Maxicare,54822,49743,5079
-PT-1070,Consultations,None (Cash),1266,0,1266
-PT-1071,Diagnostics/Lab,PhilHealth Only,6558,2216,4342
-PT-1072,Pharmacy/Meds,None (Cash),2638,0,2638
-PT-1073,Diagnostics/Lab,PhilHealth Only,5563,2160,3403
-PT-1074,Inpatient Care,Intellicare,30448,30109,339
-PT-1075,Emergency Room,PhilHealth Only,22968,7785,15183
-PT-1076,Inpatient Care,Intellicare,36940,31555,5385
-PT-1077,Diagnostics/Lab,None (Cash),5324,0,5324
-PT-1078,Inpatient Care,PhilHealth Only,37157,7873,29284
-PT-1079,Consultations,None (Cash),1284,0,1284
-PT-1080,Diagnostics/Lab,Maxicare,6892,6247,645
-PT-1081,Inpatient Care,None (Cash),27694,0,27694
-PT-1082,Emergency Room,PhilHealth Only,15892,5217,10675
-PT-1083,Pharmacy/Meds,None (Cash),3529,0,3529
-PT-1084,Pharmacy/Meds,None (Cash),3342,0,3342
-PT-1085,Diagnostics/Lab,PhilHealth Only,6206,2275,3931
-PT-1086,Surgery/Procedures,PhilHealth Only,83014,23408,59606
-PT-1087,Consultations,Maxicare,1371,1336,35
-PT-1088,Consultations,PhilHealth Only,1194,434,760
-PT-1089,Inpatient Care,PhilHealth Only,26552,7185,19367
-PT-1090,Pharmacy/Meds,None (Cash),3915,0,3915
-PT-1091,Inpatient Care,Intellicare,27377,26785,592
-PT-1092,Emergency Room,Intellicare,19847,19310,537
-PT-1093,Inpatient Care,PhilHealth Only,27614,9608,18006
-PT-1094,Consultations,Medicard,1061,985,76
-PT-1095,Pharmacy/Meds,PhilHealth Only,4214,1139,3075
-PT-1096,Pharmacy/Meds,PhilHealth Only,3678,792,2886
-PT-1097,Consultations,PhilHealth Only,1365,493,872
-PT-1098,Emergency Room,Intellicare,21062,20130,932
-PT-1099,Emergency Room,None (Cash),15427,0,15427
-PT-1100,Pharmacy/Meds,None (Cash),3204,0,3204
-PT-1101,Surgery/Procedures,PhilHealth Only,78612,21050,57562
-PT-1102,Pharmacy/Meds,Maxicare,2531,2506,25
-PT-1103,Emergency Room,PhilHealth Only,16521,6290,10231
-PT-1104,Inpatient Care,PhilHealth Only,34869,13568,21301
-PT-1105,Emergency Room,None (Cash),20064,0,20064
-PT-1106,Emergency Room,Intellicare,19444,18207,1237
-PT-1107,Diagnostics/Lab,PhilHealth Only,6641,1923,4718
-PT-1108,Emergency Room,None (Cash),18825,0,18825
-PT-1109,Diagnostics/Lab,None (Cash),7537,0,7537
-PT-1110,Diagnostics/Lab,Maxicare,5625,5172,453
-PT-1111,Emergency Room,Maxicare,23750,20801,2949
-PT-1112,Emergency Room,Maxicare,21468,19908,1560
-PT-1113,Consultations,Medicard,1005,958,47
-PT-1114,Consultations,Maxicare,1051,1009,42
-PT-1115,Surgery/Procedures,PhilHealth Only,88703,31861,56842
-PT-1116,Inpatient Care,PhilHealth Only,38153,8467,29686
-PT-1117,Pharmacy/Meds,PhilHealth Only,2828,848,1980
-PT-1118,Emergency Room,Maxicare,20470,18835,1635
-PT-1119,Surgery/Procedures,Intellicare,86952,79940,7012
-PT-1120,Pharmacy/Meds,Intellicare,2678,2524,154
-PT-1121,Surgery/Procedures,PhilHealth Only,88265,25542,62723
-PT-1122,Emergency Room,Maxicare,20798,20708,90
-PT-1123,Inpatient Care,None (Cash),34317,0,34317
-PT-1124,Diagnostics/Lab,Medicard,6215,6164,51
-PT-1125,Consultations,PhilHealth Only,1395,440,955
-PT-1126,Inpatient Care,PhilHealth Only,36427,12771,23656
-PT-1127,Surgery/Procedures,Medicard,71215,66303,4912
-PT-1128,Surgery/Procedures,PhilHealth Only,79255,28021,51234
-PT-1129,Pharmacy/Meds,Medicard,3305,3130,175
-PT-1130,Surgery/Procedures,None (Cash),71846,0,71846
-PT-1131,Pharmacy/Meds,Maxicare,3900,3663,237
-PT-1132,Inpatient Care,Maxicare,39289,37609,1680
-PT-1133,Surgery/Procedures,PhilHealth Only,71538,19527,52011
-PT-1134,Emergency Room,PhilHealth Only,21018,7862,13156
-PT-1135,Inpatient Care,PhilHealth Only,34428,9769,24659
-PT-1136,Surgery/Procedures,None (Cash),74051,0,74051
-PT-1137,Surgery/Procedures,Medicard,80321,75311,5010
-PT-1138,Pharmacy/Meds,PhilHealth Only,3770,1127,2643
-PT-1139,Inpatient Care,PhilHealth Only,36517,14588,21929
-PT-1140,Diagnostics/Lab,Medicard,7396,6783,613
-PT-1141,Consultations,PhilHealth Only,1488,435,1053
-PT-1142,Emergency Room,None (Cash),21917,0,21917
-PT-1143,Inpatient Care,Medicard,32552,27856,4696
-PT-1144,Diagnostics/Lab,None (Cash),6232,0,6232
-PT-1145,Surgery/Procedures,PhilHealth Only,72966,26277,46689
-PT-1146,Surgery/Procedures,None (Cash),67841,0,67841
-PT-1147,Inpatient Care,PhilHealth Only,28888,6721,22167
-PT-1148,Diagnostics/Lab,Intellicare,6451,5649,802
-PT-1149,Pharmacy/Meds,PhilHealth Only,4487,937,3550
+PT-1000,Diagnostics/Lab,Intellicare,6230,6026,204
+PT-1001,Pharmacy/Meds,Maxicare,4103,3796,307
+PT-1002,Emergency Room,None (Cash),24438,0,24438
+PT-1003,Pharmacy/Meds,PhilHealth Only,4277,1373,2904
+PT-1004,Pharmacy/Meds,Maxicare,2880,2563,317
+PT-1005,Surgery/Procedures,PhilHealth Only,65181,20319,44862
+PT-1006,Consultations,Medicard,1047,1018,29
+PT-1007,Emergency Room,Medicard,20029,19220,809
+PT-1008,Pharmacy/Meds,Medicard,3619,3428,191
+PT-1009,Surgery/Procedures,Medicard,59629,55407,4222
+PT-1010,Emergency Room,None (Cash),22897,0,22897
+PT-1011,Inpatient Care,None (Cash),31029,0,31029
+PT-1012,Pharmacy/Meds,Intellicare,2596,2524,72
+PT-1013,Emergency Room,Intellicare,22257,20943,1314
+PT-1014,Emergency Room,None (Cash),16909,0,16909
+PT-1015,Diagnostics/Lab,Maxicare,7027,6238,789
+PT-1016,Emergency Room,PhilHealth Only,20686,6211,14475
+PT-1017,Emergency Room,Intellicare,24239,20943,3296
+PT-1018,Pharmacy/Meds,PhilHealth Only,2648,697,1951
+PT-1019,Pharmacy/Meds,PhilHealth Only,3132,1038,2094
+PT-1020,Pharmacy/Meds,Intellicare,4099,3745,354
+PT-1021,Diagnostics/Lab,None (Cash),7496,0,7496
+PT-1022,Consultations,PhilHealth Only,1431,354,1077
+PT-1023,Inpatient Care,Intellicare,30353,29373,980
+PT-1024,Consultations,PhilHealth Only,1483,379,1104
+PT-1025,Emergency Room,Maxicare,24333,23805,528
+PT-1026,Consultations,PhilHealth Only,1349,307,1042
+PT-1027,Surgery/Procedures,PhilHealth Only,89008,23940,65068
+PT-1028,Diagnostics/Lab,PhilHealth Only,7178,2203,4975
+PT-1029,Emergency Room,Medicard,20690,19995,695
+PT-1030,Consultations,Maxicare,1198,1183,15
+PT-1031,Inpatient Care,Intellicare,35483,31781,3702
+PT-1032,Diagnostics/Lab,Intellicare,7360,6622,738
+PT-1033,Inpatient Care,PhilHealth Only,25040,8114,16926
+PT-1034,Diagnostics/Lab,Intellicare,5549,5546,3
+PT-1035,Inpatient Care,Medicard,35929,32473,3456
+PT-1036,Diagnostics/Lab,PhilHealth Only,6932,1920,5012
+PT-1037,Consultations,Maxicare,1364,1195,169
+PT-1038,Pharmacy/Meds,Medicard,3590,3286,304
+PT-1039,Emergency Room,PhilHealth Only,19077,6996,12081
+PT-1040,Pharmacy/Meds,None (Cash),3072,0,3072
+PT-1041,Surgery/Procedures,PhilHealth Only,85301,29377,55924
+PT-1042,Diagnostics/Lab,Maxicare,7893,6891,1002
+PT-1043,Diagnostics/Lab,PhilHealth Only,7663,1700,5963
+PT-1044,Inpatient Care,Maxicare,38331,33707,4624
+PT-1045,Surgery/Procedures,Medicard,61606,60931,675
+PT-1046,Consultations,PhilHealth Only,1496,435,1061
+PT-1047,Surgery/Procedures,PhilHealth Only,54337,18105,36232
+PT-1048,Diagnostics/Lab,PhilHealth Only,6567,1834,4733
+PT-1049,Pharmacy/Meds,Intellicare,3086,2905,181
+PT-1050,Inpatient Care,PhilHealth Only,39685,14877,24808
+PT-1051,Pharmacy/Meds,Medicard,2997,2943,54
+PT-1052,Consultations,PhilHealth Only,1403,426,977
+PT-1053,Surgery/Procedures,None (Cash),82230,0,82230
+PT-1054,Surgery/Procedures,PhilHealth Only,53428,16325,37103
+PT-1055,Diagnostics/Lab,None (Cash),5987,0,5987
+PT-1056,Emergency Room,PhilHealth Only,15915,4324,11591
+PT-1057,Inpatient Care,Intellicare,31100,30728,372
+PT-1058,Emergency Room,None (Cash),23122,0,23122
+PT-1059,Diagnostics/Lab,None (Cash),7964,0,7964
+PT-1060,Pharmacy/Meds,Medicard,2721,2510,211
+PT-1061,Emergency Room,None (Cash),19962,0,19962
+PT-1062,Consultations,None (Cash),1028,0,1028
+PT-1063,Surgery/Procedures,Maxicare,78244,73945,4299
+PT-1064,Pharmacy/Meds,Intellicare,3497,3235,262
+PT-1065,Consultations,Intellicare,1074,995,79
+PT-1066,Inpatient Care,None (Cash),33494,0,33494
+PT-1067,Surgery/Procedures,PhilHealth Only,52607,17883,34724
+PT-1068,Pharmacy/Meds,Maxicare,3311,3021,290
+PT-1069,Consultations,None (Cash),1485,0,1485
+PT-1070,Surgery/Procedures,Medicard,65744,61270,4474
+PT-1071,Surgery/Procedures,PhilHealth Only,79878,30358,49520
+PT-1072,Inpatient Care,Maxicare,33400,28641,4759
+PT-1073,Emergency Room,Medicard,17415,16621,794
+PT-1074,Surgery/Procedures,PhilHealth Only,59378,18817,40561
+PT-1075,Surgery/Procedures,PhilHealth Only,68235,17416,50819
+PT-1076,Surgery/Procedures,Medicard,73098,71965,1133
+PT-1077,Pharmacy/Meds,PhilHealth Only,3721,1071,2650
+PT-1078,Emergency Room,PhilHealth Only,15810,4615,11195
+PT-1079,Emergency Room,PhilHealth Only,18886,6526,12360
+PT-1080,Consultations,PhilHealth Only,1028,283,745
+PT-1081,Inpatient Care,Maxicare,37298,37170,128
+PT-1082,Emergency Room,Maxicare,24720,24402,318
+PT-1083,Consultations,PhilHealth Only,1311,481,830
+PT-1084,Surgery/Procedures,Maxicare,61002,59062,1940
+PT-1085,Inpatient Care,None (Cash),34025,0,34025
+PT-1086,Pharmacy/Meds,Maxicare,4336,4187,149
+PT-1087,Emergency Room,PhilHealth Only,18595,6044,12551
+PT-1088,Consultations,Maxicare,1092,967,125
+PT-1089,Pharmacy/Meds,Medicard,4149,3634,515
+PT-1090,Pharmacy/Meds,PhilHealth Only,3095,935,2160
+PT-1091,Consultations,PhilHealth Only,1163,408,755
+PT-1092,Diagnostics/Lab,Intellicare,5828,5129,699
+PT-1093,Surgery/Procedures,PhilHealth Only,58261,17723,40538
+PT-1094,Surgery/Procedures,PhilHealth Only,77506,21778,55728
+PT-1095,Diagnostics/Lab,PhilHealth Only,7135,2618,4517
+PT-1096,Emergency Room,PhilHealth Only,24231,6400,17831
+PT-1097,Diagnostics/Lab,Maxicare,7509,7142,367
+PT-1098,Emergency Room,PhilHealth Only,23741,6022,17719
+PT-1099,Pharmacy/Meds,Medicard,3836,3423,413
+PT-1100,Diagnostics/Lab,Maxicare,6358,5754,604
+PT-1101,Diagnostics/Lab,Maxicare,6108,5275,833
+PT-1102,Surgery/Procedures,PhilHealth Only,63284,25037,38247
+PT-1103,Diagnostics/Lab,Intellicare,5995,5657,338
+PT-1104,Emergency Room,Maxicare,15142,14987,155
+PT-1105,Diagnostics/Lab,None (Cash),6236,0,6236
+PT-1106,Pharmacy/Meds,None (Cash),3862,0,3862
+PT-1107,Pharmacy/Meds,Maxicare,3281,3007,274
+PT-1108,Emergency Room,Maxicare,24609,24552,57
+PT-1109,Surgery/Procedures,Maxicare,61794,60981,813
+PT-1110,Diagnostics/Lab,Intellicare,5001,4868,133
+PT-1111,Surgery/Procedures,PhilHealth Only,71016,17149,53867
+PT-1112,Surgery/Procedures,Maxicare,73344,66868,6476
+PT-1113,Consultations,PhilHealth Only,1055,262,793
+PT-1114,Pharmacy/Meds,Intellicare,3625,3492,133
+PT-1115,Pharmacy/Meds,PhilHealth Only,2794,925,1869
+PT-1116,Emergency Room,Medicard,18247,16727,1520
+PT-1117,Diagnostics/Lab,PhilHealth Only,5160,1578,3582
+PT-1118,Emergency Room,PhilHealth Only,18063,6422,11641
+PT-1119,Pharmacy/Meds,None (Cash),3011,0,3011
+PT-1120,Emergency Room,PhilHealth Only,23308,8093,15215
+PT-1121,Pharmacy/Meds,PhilHealth Only,4102,1619,2483
+PT-1122,Consultations,Maxicare,1088,983,105
+PT-1123,Diagnostics/Lab,None (Cash),6612,0,6612
+PT-1124,Diagnostics/Lab,None (Cash),5323,0,5323
+PT-1125,Consultations,Intellicare,1082,1005,77
+PT-1126,Emergency Room,Maxicare,16770,15247,1523
+PT-1127,Surgery/Procedures,Maxicare,76191,68493,7698
+PT-1128,Inpatient Care,PhilHealth Only,38148,9947,28201
+PT-1129,Diagnostics/Lab,Maxicare,6298,5601,697
+PT-1130,Diagnostics/Lab,Medicard,7430,6950,480
+PT-1131,Consultations,PhilHealth Only,1027,222,805
+PT-1132,Consultations,None (Cash),1345,0,1345
+PT-1133,Emergency Room,Maxicare,21161,20629,532
+PT-1134,Surgery/Procedures,PhilHealth Only,63799,22876,40923
+PT-1135,Surgery/Procedures,Medicard,89179,88616,563
+PT-1136,Surgery/Procedures,Intellicare,71042,68323,2719
+PT-1137,Consultations,PhilHealth Only,1092,354,738
+PT-1138,Inpatient Care,Medicard,34030,31248,2782
+PT-1139,Diagnostics/Lab,Maxicare,7141,6621,520
+PT-1140,Surgery/Procedures,PhilHealth Only,52989,10703,42286
+PT-1141,Pharmacy/Meds,PhilHealth Only,4104,1130,2974
+PT-1142,Surgery/Procedures,PhilHealth Only,63571,24975,38596
+PT-1143,Consultations,Maxicare,1438,1376,62
+PT-1144,Inpatient Care,Medicard,37160,35142,2018
+PT-1145,Diagnostics/Lab,Medicard,6537,6293,244
+PT-1146,Pharmacy/Meds,PhilHealth Only,3827,934,2893
+PT-1147,Inpatient Care,None (Cash),25642,0,25642
+PT-1148,Surgery/Procedures,PhilHealth Only,71040,28389,42651
+PT-1149,Emergency Room,Maxicare,24701,23346,1355
