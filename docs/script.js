@@ -6,6 +6,22 @@ let CHART_INSTANCES = {};
 
 let currentSort = { column: null, direction: "asc" };
 
+// Debounce function to reduce excessive function calls
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+// Helper function to calculate risk level
+function getRiskLevel(oopAmount) {
+  if (oopAmount > 20000) return "High";
+  if (oopAmount > 5000) return "Moderate";
+  return "Low";
+}
+
 // Page sections
 function switchPage(pageId, navElement) {
   document
@@ -57,14 +73,7 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // Fetch data from backend
-async function fetchStatsFromBackend() {
-  const response = await fetch("http://127.0.0.1:5000/api/stats");
-  const data = await response.json();
-  return data;
-}
-
-// Function to skip fetch on Github pages to avoid blocking errors
-// If this is viewed on github pages, it should display a mock data
+// If running on GitHub Pages, use mock data. Otherwise, fetch from local backend.
 async function fetchStatsFromBackend() {
   const isLocalhost =
     window.location.hostname === "127.0.0.1" ||
@@ -143,9 +152,7 @@ function handleFilterChange() {
   const serviceFilter = document.getElementById("serviceFilter").value;
 
   let filtered = GLOBAL_RAW_DATA.filter((row) => {
-    let risk = "Low";
-    if (row.Out_Of_Pocket > 20000) risk = "High";
-    else if (row.Out_Of_Pocket > 5000) risk = "Moderate";
+    const risk = getRiskLevel(row.Out_Of_Pocket);
 
     const matchSearch =
       row.Patient_ID.toLowerCase().includes(searchTerm) ||
@@ -298,6 +305,9 @@ function updateDashboard(data) {
 }
 
 function renderChart(id, type, data, options = {}) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return; // Skip if canvas doesn't exist
+  
   if (CHART_INSTANCES[id]) CHART_INSTANCES[id].destroy();
   const ctx = document.getElementById(id).getContext("2d");
   CHART_INSTANCES[id] = new Chart(ctx, {
@@ -334,9 +344,7 @@ function renderTables(data) {
 
   const rows = data
     .map((t) => {
-      let risk = "Low";
-      if (t.Out_Of_Pocket > 20000) risk = "High";
-      else if (t.Out_Of_Pocket > 5000) risk = "Moderate";
+      const risk = getRiskLevel(t.Out_Of_Pocket);
 
       let riskClass =
         risk === "High"
@@ -393,4 +401,8 @@ async function initDashboard() {
 function refreshDashboard() {
   initDashboard();
 }
+
+// Create debounced version of handleFilterChange for search input
+const debouncedFilterChange = debounce(handleFilterChange, 300);
+
 window.onload = initDashboard;
