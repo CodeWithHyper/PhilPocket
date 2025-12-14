@@ -16,6 +16,10 @@ _cache = {
 
 def get_cached_data():
     """Load data from CSV with caching based on file modification time."""
+    # Check if file exists
+    if not os.path.exists(DATA_FILE):
+        raise FileNotFoundError(f"Data file '{DATA_FILE}' not found")
+    
     current_mtime = os.path.getmtime(DATA_FILE)
     
     # Return cached data if file hasn't changed

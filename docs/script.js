@@ -306,7 +306,10 @@ function updateDashboard(data) {
 
 function renderChart(id, type, data, options = {}) {
   const canvas = document.getElementById(id);
-  if (!canvas) return; // Skip if canvas doesn't exist
+  if (!canvas) {
+    console.warn(`Chart canvas with id '${id}' not found`);
+    return;
+  }
   
   if (CHART_INSTANCES[id]) CHART_INSTANCES[id].destroy();
   const ctx = canvas.getContext("2d");
