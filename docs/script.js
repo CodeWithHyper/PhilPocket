@@ -309,7 +309,7 @@ function renderChart(id, type, data, options = {}) {
   if (!canvas) return; // Skip if canvas doesn't exist
   
   if (CHART_INSTANCES[id]) CHART_INSTANCES[id].destroy();
-  const ctx = document.getElementById(id).getContext("2d");
+  const ctx = canvas.getContext("2d");
   CHART_INSTANCES[id] = new Chart(ctx, {
     type: type,
     data: data,
