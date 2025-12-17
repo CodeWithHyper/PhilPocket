@@ -98,8 +98,7 @@ async function fetchStatsFromBackend() {
         Hospital_Name: row.Hospital_Name,
         Hospital_Type: row.Hospital_Type,
         Total_Bill: Number(row.Total_Bill),
-        PhilHealth_Benefit: Number(row.PhilHealth_Benefit),
-        HMO_Coverage: Number(row.HMO_Coverage),
+        Insurance_Cover: Number(row.Insurance_Cover),
         Out_Of_Pocket: Number(row.Out_Of_Pocket),
         Insurance_Plan: row.Insurance_Plan,
       }));
@@ -606,7 +605,7 @@ function renderTables(data) {
     .join("");
 
   const highRisk = data
-    .filter((t) => t.Out_Of_Pocket > 5000)
+    .filter((t) => t.Out_Of_Pocket > 15000)
     .sort((a, b) => b.Out_Of_Pocket - a.Out_Of_Pocket)
     .slice(0, 5);
   const overviewRows = highRisk
