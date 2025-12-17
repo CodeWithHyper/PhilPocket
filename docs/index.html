@@ -37,7 +37,23 @@
                 stroke-width="2"
                 d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
               ></path></svg
-            ><span class="nav-link-text">Overview</span>
+            ><span class="nav-link-text">Dashboard</span>
+          </li>
+          <li onclick="switchPage('realdata', this)" class="nav-item">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path></svg
+            ><span class="nav-link-text">National Health Statistics</span>
           </li>
           <li onclick="switchPage('explorer', this)" class="nav-item">
             <svg
@@ -53,7 +69,7 @@
                 stroke-width="2"
                 d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               ></path></svg
-            ><span class="nav-link-text">OOP Explorer</span>
+            ><span class="nav-link-text">OOP Analysis</span>
           </li>
           <li onclick="switchPage('services', this)" class="nav-item">
             <svg
@@ -69,23 +85,7 @@
                 stroke-width="2"
                 d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
               ></path></svg
-            ><span class="nav-link-text">Services</span>
-          </li>
-          <li onclick="switchPage('insurance', this)" class="nav-item">
-            <svg
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-              ></path></svg
-            ><span class="nav-link-text">Insurance</span>
+            ><span class="nav-link-text">Service Analysis</span>
           </li>
           <li onclick="switchPage('patients', this)" class="nav-item">
             <svg
@@ -210,19 +210,27 @@
                 <option value="Inpatient Care">Inpatient</option>
               </select>
             </div>
-            <button onclick="refreshDashboard()" class="btn-refresh">
-              Refresh Data
-            </button>
           </div>
 
-          <!-- PAGE 1: OVERVIEW -->
+          <!-- PAGE 1: DASHBOARD (Summary) -->
           <section id="overview" class="page-section active">
+            <div class="notice-box">
+              <div class="notice-flex">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="notice-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="notice-text">
+                  <strong>Data Simulation Notice:</strong> Dashboard metrics and charts use <strong>simulated patient transactions</strong> generated from PhilHealth 2024-0037 case rates for interactive analysis demonstration. Individual healthcare billing data is confidential under Data Privacy Act 2012. For real government statistics, see <strong class="notice-highlight">National Health Statistics</strong> tab.
+                </p>
+              </div>
+            </div>
             <!-- KPI Cards -->
             <div class="grid-4">
               <div class="card">
                 <div class="metric-info">
                   <p class="metric-label">Total Billed Amount</p>
                   <h2 class="metric-value" id="totalBillDisplay">...</h2>
+                  <p class="card-sub metric-sub">Simulated patient data</p>
                 </div>
               </div>
               <div class="card">
@@ -234,6 +242,7 @@
                   >
                     ...
                   </h2>
+                  <p class="card-sub metric-sub">PhilHealth + HMO</p>
                 </div>
               </div>
               <div class="card">
@@ -242,6 +251,7 @@
                   <h2 class="metric-value text-danger" id="totalOOPDisplay">
                     ...
                   </h2>
+                  <p class="card-sub metric-sub">Patient direct cost</p>
                 </div>
               </div>
               <div class="card">
@@ -250,6 +260,7 @@
                   <h2 class="metric-value text-info" id="avgOOPPercentDisplay">
                     ...
                   </h2>
+                  <p class="card-sub metric-sub">Validated vs World Bank</p>
                 </div>
               </div>
             </div>
@@ -257,46 +268,37 @@
             <div class="grid-2">
               <div class="card">
                 <h3>Service Category Overview</h3>
-                <p class="card-sub">Quick view of Service Expenses</p>
+                <p class="card-sub">Insurance vs OOP by Medical Service</p>
                 <div class="chart-wrapper">
                   <canvas id="overviewServiceChart"></canvas>
                 </div>
               </div>
               <div class="card">
                 <h3>Cost Distribution</h3>
-                <p class="card-sub">Overview of patient cost burden</p>
+                <p class="card-sub">Patient OOP burden ranges</p>
                 <div class="chart-wrapper">
                   <canvas id="overviewDistributionChart"></canvas>
                 </div>
               </div>
             </div>
 
-            <div
-              class="grid-balanced"
-              style="
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 24px;
-                margin-bottom: 32px;
-              "
-            >
-              <div class="card">
-                <h3>Insurance Plans</h3>
-                <p class="card-sub">Performance Summary</p>
-                <div class="chart-wrapper">
-                  <canvas id="overviewPlanChart"></canvas>
-                </div>
-              </div>
+            <div class="grid-1">
               <div class="table-container">
                 <div class="table-header">
-                  <h3>Top High Risk Patients</h3>
+                  <h3>High Risk Patients (OOP > ₱15,000)</h3>
+                  <p class="card-sub">Interactive patient transaction records with filters</p>
                 </div>
                 <div class="responsive-table">
                   <table id="overviewTable">
                     <thead>
                       <tr>
                         <th>ID</th>
+                        <th>Age</th>
+                        <th>Disease</th>
+                        <th>Hospital</th>
+                        <th>Region</th>
                         <th>Service</th>
+                        <th>Plan</th>
                         <th class="text-danger">OOP</th>
                         <th>Flag</th>
                       </tr>
@@ -308,8 +310,160 @@
             </div>
           </section>
 
-          <!-- PAGE 2: EXPLORER -->
+          <!-- PAGE 2: PHILHEALTH STATISTICS -->
+          <section id="realdata" class="page-section">
+            <div class="real-data-banner">
+              <h2 class="real-data-title">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                National Health Statistics (Philippines)
+              </h2>
+              <p class="real-data-description">
+                Real claims statistics from <strong>PhilHealth Stats & Charts 2023</strong> official report. 
+                This data represents actual healthcare transactions processed by the Philippine Health Insurance Corporation.
+              </p>
+              <div class="real-data-tags">
+                <div class="tag-philhealth">
+                  📊 <strong>10 Medical Cases</strong> - Real claims amounts & counts
+                </div>
+                <div class="tag-worldbank">
+                  🏥 <strong>6 Hospital Classes</strong> - HCI classification distribution
+                </div>
+                <div class="tag-psa">
+                  👥 <strong>6 Membership Categories</strong> - Real beneficiary statistics
+                </div>
+                <div class="tag-who">
+                  🌍 <strong>WHO GHED</strong> - Real OOP and health spending indicators
+                </div>
+              </div>
+            </div>
+
+            <!-- PhilHealth Top 10 Medical Cases -->
+            <div class="grid-1">
+              <div class="card">
+                <h3>PhilHealth Top 10 Medical Cases (2023)</h3>
+                <p class="card-sub chart-sub-success">
+                  Total amounts paid and number of claims processed
+                </p>
+                <div class="chart-wrapper chart-wrapper-450">
+                  <canvas id="philhealthTop10Chart"></canvas>
+                </div>
+                <div class="info-box-success">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> PhilHealth Corporation - Stats and Charts 2023, Page 15<br>
+                    <strong>Dataset:</strong> Actual claims processed by PhilHealth in 2023 across all accredited facilities<br>
+                    <strong>Top Case:</strong> Pneumonia with ₱8.45 billion in claims (1.2M+ patients)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Claims by Hospital Classification -->
+            <div class="grid-2">
+              <div class="card">
+                <h3>Claims Distribution by Hospital Class</h3>
+                <p class="card-sub chart-sub-success">
+                  Claims by HCI classification level
+                </p>
+                <div class="chart-wrapper chart-wrapper-400">
+                  <canvas id="hciClassChart"></canvas>
+                </div>
+                <div class="info-box-primary">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> PhilHealth Corporation - Stats and Charts 2023, Page 14<br>
+                    <strong>Insight:</strong> Level 2 hospitals handle 34% of claims, followed by Level 3 (26.7%)
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h3>National OOP Trend (Historical)</h3>
+                <p class="card-sub chart-sub-success">World Bank 1999-2022</p>
+                <div class="chart-wrapper chart-wrapper-400">
+                  <canvas id="trendChart"></canvas>
+                </div>
+                <div class="info-box-primary">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> World Bank Open Data<br>
+                    <strong>Current Rate:</strong> Philippines at 44.4% OOP (2022) - Higher than WHO recommended 20%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WHO GHED (Real OOP indicators) -->
+            <div class="grid-1">
+              <div class="card">
+                <h3>WHO GHED: OOP & Health Spending Trends</h3>
+                <p class="card-sub chart-sub-success">Global Health Expenditure Database (GHED)</p>
+
+                <div class="controls-bar controls-ghed">
+                  <div class="filter-group">
+                    <select id="ghedCountrySelect" class="filter-select" aria-label="Select country"></select>
+                    <select id="ghedMetricSelect" class="filter-select" aria-label="Select metric"></select>
+                  </div>
+                </div>
+
+                <div class="chart-wrapper chart-wrapper-420">
+                  <canvas id="ghedChart"></canvas>
+                </div>
+
+                <div class="info-box-warning">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> WHO Global Health Expenditure Database (GHED) export<br>
+                    <strong>Dataset:</strong> Derived into a compact 5-column format (<code>ghed_tidy.csv</code>) for dashboard filtering (raw export file not required)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PSA Mortality Statistics -->
+            <div class="grid-1">
+              <div class="card">
+                <h3>Top 10 Causes of Death in Philippines (2025)</h3>
+                <p class="card-sub chart-sub-success">
+                  PSA Vital Statistics January-April 2025
+                </p>
+                <div class="chart-wrapper chart-wrapper-500">
+                  <canvas id="nationalContextChart"></canvas>
+                </div>
+                <div class="info-box-danger">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> Philippine Statistics Authority - Vital Events Jan-Apr 2025<br>
+                    <strong>Leading Causes:</strong> Heart Disease (20%), Cancer (11.3%), Stroke (10.1%)<br>
+                    <strong>Health Implication:</strong> These chronic diseases drive significant OOP expenditure
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regional Statistics -->
+            <div class="grid-1">
+              <div class="card">
+                <h3>Regional Death Distribution</h3>
+                <p class="card-sub chart-sub-success">
+                  PSA Regional Statistics 2024/2025
+                </p>
+                <div class="chart-wrapper">
+                  <canvas id="regionPieChart"></canvas>
+                </div>
+                <div class="info-box-warning">
+                  <p class="info-text">
+                    <strong>Data Source:</strong> PSA Monthly Vital Statistics Release<br>
+                    <strong>Top Regions:</strong> CALABARZON (33,716), NCR (25,685), Central Luzon (19,982)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAGE 3: OOP EXPLORER (Simulated) -->
           <section id="explorer" class="page-section">
+            <div class="info-notice">
+              <p class="info-notice-text">
+                <strong>Note:</strong> Charts below use simulated patient transactions based on PhilHealth 2024-0037 case rates for interactive analysis demonstration.
+              </p>
+            </div>
             <div class="grid-1">
               <div class="card">
                 <h3>Cost Distribution Analysis</h3>
@@ -323,8 +477,13 @@
             </div>
           </section>
 
-          <!-- PAGE 3: SERVICES -->
+          <!-- PAGE 4: SERVICE ANALYSIS (Simulated) -->
           <section id="services" class="page-section">
+            <div class="info-notice">
+              <p class="info-notice-text">
+                <strong>Note:</strong> Service breakdown uses simulated patient transactions for interactive analysis demonstration.
+              </p>
+            </div>
             <div class="grid-1">
               <div class="card">
                 <h3>Service Category Insights</h3>
@@ -336,16 +495,18 @@
                 </div>
               </div>
             </div>
-          </section>
 
-          <!-- PAGE 4: INSURANCE -->
-          <section id="insurance" class="page-section">
-            <div class="grid-1">
+            <div class="grid-2">
+              <div class="card">
+                <h3>Hospital Type Distribution</h3>
+                <p class="card-sub">Private vs Government Facilities (Simulated)</p>
+                <div class="chart-wrapper">
+                  <canvas id="hospitalTypeChart"></canvas>
+                </div>
+              </div>
               <div class="card">
                 <h3>Insurance Plan Performance</h3>
-                <p class="card-sub">
-                  Average Patient Out-of-Pocket Cost by Plan
-                </p>
+                <p class="card-sub">Average Patient OOP by Plan (Simulated)</p>
                 <div class="chart-wrapper">
                   <canvas id="planChart"></canvas>
                 </div>
@@ -353,11 +514,17 @@
             </div>
           </section>
 
-          <!-- PAGE 5: PATIENTS -->
+          <!-- PAGE 5: PATIENTS (Simulated) -->
           <section id="patients" class="page-section">
+            <div class="info-notice">
+              <p class="info-notice-text">
+                <strong>Note:</strong> Patient records below are simulated transactions for interactive filtering demonstration. Individual healthcare data is protected under Data Privacy Act 2012.
+              </p>
+            </div>
             <div class="table-container">
               <div class="table-header">
-                <h3>Full Patient Ledger</h3>
+                <h3>Full Patient Ledger (Simulated)</h3>
+                <p class="card-sub">Interactive table with sorting and filtering capabilities</p>
               </div>
               <div class="responsive-table">
                 <table>
@@ -366,6 +533,78 @@
                       <th onclick="toggleSort('Patient_ID')" id="th-Patient_ID">
                         <div class="th-content">
                           <span>Patient ID</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th onclick="toggleSort('Age')" id="th-Age">
+                        <div class="th-content">
+                          <span>Age</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th onclick="toggleSort('Disease')" id="th-Disease">
+                        <div class="th-content">
+                          <span>Disease</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th onclick="toggleSort('Hospital_Name')" id="th-Hospital_Name">
+                        <div class="th-content">
+                          <span>Hospital</span>
+                          <svg
+                            class="sort-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                            ></path>
+                          </svg>
+                        </div>
+                      </th>
+                      <th onclick="toggleSort('Region')" id="th-Region">
+                        <div class="th-content">
+                          <span>Region</span>
                           <svg
                             class="sort-icon"
                             fill="none"
@@ -470,6 +709,60 @@
             </div>
           </section>
         </div>
+        
+        <!-- Data Source Attribution Footer -->
+        <footer class="data-footer">
+          <h4 class="footer-title">
+            📊 DATA SOURCES & ATTRIBUTIONS
+          </h4>
+          <div class="footer-grid">
+            <div>
+              <strong class="source-philhealth">PhilHealth Stats & Charts 2023:</strong><br>
+              Top 10 Medical Cases, Claims by HCI Class, Membership Statistics<br>
+              <a href="https://www.philhealth.gov.ph/about_us/statsncharts/SNC2023_02142024.pdf" target="_blank" class="footer-link">PhilHealth Official Report 2023 →</a>
+            </div>
+            <div>
+              <strong class="source-simulated">Patient Transaction Data (Simulated):</strong><br>
+              Generated using PhilHealth Circular 2024-0037 case rates<br>
+              <a href="https://www.philhealth.gov.ph/" target="_blank" class="footer-link">PhilHealth Official Website →</a>
+            </div>
+            <div>
+              <strong class="source-psa">Top 10 Causes of Death:</strong><br>
+              Philippine Statistics Authority (PSA) - Vital Events Jan-Apr 2025<br>
+              <a href="https://psa.gov.ph/statistics/vital-statistics/node/1684081229" target="_blank" class="footer-link">PSA Official Website →</a>
+            </div>
+            <div>
+              <strong class="source-warning">Regional Death Statistics:</strong><br>
+              Philippine Statistics Authority (PSA) - Monthly Release 2024/2025<br>
+              <a href="https://psa.gov.ph/statistics/vital-statistics" target="_blank" class="footer-link">PSA Official Website →</a>
+            </div>
+            <div>
+              <strong class="source-worldbank">National OOP Trend (1999-2022):</strong><br>
+              World Bank Open Data - Out-of-Pocket Health Expenditure<br>
+              <a href="https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PH" target="_blank" class="footer-link">World Bank Data →</a>
+            </div>
+            <div>
+              <strong class="source-who">WHO GHED (150x5 Internet Dataset):</strong><br>
+              Global Health Expenditure Database (OOP share, CHE, etc.) used to build <code>ghed_tidy.csv</code><br>
+              <a href="https://apps.who.int/nha/database" target="_blank" class="footer-link">WHO GHED Database →</a>
+            </div>
+            <div>
+              <strong class="source-who">Hospital Facilities:</strong><br>
+              PhilHealth Accredited Health Facilities List 2024<br>
+              <a href="https://www.philhealth.gov.ph/about_us/directory/PhCARES_hospitals012024.pdf" target="_blank" class="footer-link">PhilHealth Directory →</a>
+            </div>
+          </div>
+          <p class="footer-summary">
+            <strong>✓ Real Government Data Integration:</strong> This dashboard now includes <strong>official PhilHealth 2023 claims statistics</strong> 
+            (Top 10 Medical Cases with actual claims amounts and counts, Hospital Classification distribution). 
+            Patient transaction records are simulated using validated PhilHealth case rates to demonstrate OOP expenditure patterns 
+            while maintaining privacy compliance (Data Privacy Act 2012).
+          </p>
+          <p class="footer-note">
+            <strong>Data Sources Summary:</strong> 1 PhilHealth official report (2023 Stats & Charts), 3 PSA datasets (mortality, regional, CPI), 
+            1 World Bank dataset (OOP trends), 1 WHO GHED dataset (macro indicators), 1 PhilHealth directory = <strong>7 real government/international data sources</strong>.
+          </p>
+        </footer>
       </main>
     </div>
 

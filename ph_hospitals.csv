@@ -1,0 +1,11 @@
+Facility_Name,Region,Level,Type
+"Philippine General Hospital",NCR,3,Government
+"St. Luke's Medical Center",NCR,3,Private
+"Baguio General Hospital",CAR,3,Government
+"Cebu Doctors' University Hospital",VII,3,Private
+"Davao Regional Medical Center",XI,3,Government
+"Jose B. Lingad Memorial Regional Hospital",III,3,Government
+"Medical Center Manila",NCR,3,Private
+"Lung Center of the Philippines",NCR,3,Government
+"Philippine Heart Center",NCR,3,Government
+"The Medical City",NCR,3,Private

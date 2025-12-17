@@ -1,12 +1,12 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 import pandas as pd
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='docs', static_url_path='')
 CORS(app)
 
-DATA_FILE = 'ph_healthcare_data.csv'
+DATA_FILE = 'docs/ph_healthcare_data.csv'
 
 # Cache for storing loaded data
 _cache = {
@@ -42,6 +42,10 @@ def get_dashboard_data():
         return jsonify(raw_data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/')
+def index():
+    return send_from_directory('docs', 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

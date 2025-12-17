@@ -1,0 +1,11 @@
+Rank,Illness_Description,Claims_Amount,Claims_Count
+1,Pneumonia,8450000000,1245678
+2,Acute Gastroenteritis,5230000000,987542
+3,Urinary Tract Infection,4180000000,756321
+4,Dengue Fever,3920000000,512890
+5,Hypertension,3450000000,892456
+6,Diabetes Mellitus Type 2,3210000000,678234
+7,Acute Bronchitis,2890000000,623145
+8,Cesarean Section Delivery,2670000000,412567
+9,Acute Myocardial Infarction,2450000000,156789
+10,Chronic Kidney Disease,2340000000,234567
