@@ -99,7 +99,7 @@ Out-of-Pocket = Total Bill - PhilHealth - HMO
 
 ### Step 1: Install Dependencies
 ```bOption 1: GitHub Pages (Recommended)
-Simply visit the live URL: [Your GitHub Pages URL]
+Simply visit the live URL: https://codewithhyper.github.io/PhilPocket/
 
 All data loads directly from the repository - no backend needed!
 
@@ -147,7 +147,7 @@ Server runs at `http://127.0.0.1:5000`
 ✓ All data sources have clickable attribution links in footer
 
 ## Live Demo
-🔗 **GitHub Pages:** [Your Live URL Here]
+🔗 **GitHub Pages:** (https://codewithhyper.github.io/PhilPocket/)
 
 ## Author
 **David Erwin Valdepeña**  
