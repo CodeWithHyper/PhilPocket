@@ -339,21 +339,27 @@
               </div>
             </div>
 
-            <!-- PhilHealth Top 10 Medical Cases -->
+            <!-- WHO GHED (Real OOP indicators) -->
             <div class="grid-1">
               <div class="card">
-                <h3>PhilHealth Top 10 Medical Cases (2023)</h3>
-                <p class="card-sub chart-sub-success">
-                  Total amounts paid and number of claims processed
-                </p>
-                <div class="chart-wrapper chart-wrapper-450">
-                  <canvas id="philhealthTop10Chart"></canvas>
+                <h3>WHO GHED: OOP & Health Spending Trends</h3>
+                <p class="card-sub chart-sub-success">Global Health Expenditure Database (GHED)</p>
+
+                <div class="controls-bar controls-ghed">
+                  <div class="filter-group">
+                    <select id="ghedCountrySelect" class="filter-select" aria-label="Select country"></select>
+                    <select id="ghedMetricSelect" class="filter-select" aria-label="Select metric"></select>
+                  </div>
                 </div>
-                <div class="info-box-success">
+
+                <div class="chart-wrapper chart-wrapper-420">
+                  <canvas id="ghedChart"></canvas>
+                </div>
+
+                <div class="info-box-warning">
                   <p class="info-text">
-                    <strong>Data Source:</strong> PhilHealth Corporation - Stats and Charts 2023, Page 15<br>
-                    <strong>Dataset:</strong> Actual claims processed by PhilHealth in 2023 across all accredited facilities<br>
-                    <strong>Top Case:</strong> Pneumonia with ₱8.45 billion in claims (1.2M+ patients)
+                    <strong>Data Source:</strong> WHO Global Health Expenditure Database (GHED) export<br>
+                    <strong>Dataset:</strong> Derived into a compact 5-column format (<code>ghed_tidy.csv</code>) for dashboard filtering (raw export file not required)
                   </p>
                 </div>
               </div>
@@ -391,27 +397,21 @@
               </div>
             </div>
 
-            <!-- WHO GHED (Real OOP indicators) -->
+            <!-- PhilHealth Top 10 Medical Cases -->
             <div class="grid-1">
               <div class="card">
-                <h3>WHO GHED: OOP & Health Spending Trends</h3>
-                <p class="card-sub chart-sub-success">Global Health Expenditure Database (GHED)</p>
-
-                <div class="controls-bar controls-ghed">
-                  <div class="filter-group">
-                    <select id="ghedCountrySelect" class="filter-select" aria-label="Select country"></select>
-                    <select id="ghedMetricSelect" class="filter-select" aria-label="Select metric"></select>
-                  </div>
+                <h3>PhilHealth Top 10 Medical Cases (2023)</h3>
+                <p class="card-sub chart-sub-success">
+                  Total amounts paid and number of claims processed
+                </p>
+                <div class="chart-wrapper chart-wrapper-450">
+                  <canvas id="philhealthTop10Chart"></canvas>
                 </div>
-
-                <div class="chart-wrapper chart-wrapper-420">
-                  <canvas id="ghedChart"></canvas>
-                </div>
-
-                <div class="info-box-warning">
+                <div class="info-box-success">
                   <p class="info-text">
-                    <strong>Data Source:</strong> WHO Global Health Expenditure Database (GHED) export<br>
-                    <strong>Dataset:</strong> Derived into a compact 5-column format (<code>ghed_tidy.csv</code>) for dashboard filtering (raw export file not required)
+                    <strong>Data Source:</strong> PhilHealth Corporation - Stats and Charts 2023, Page 15<br>
+                    <strong>Dataset:</strong> Actual claims processed by PhilHealth in 2023 across all accredited facilities<br>
+                    <strong>Top Case:</strong> Pneumonia with ₱8.45 billion in claims (1.2M+ patients)
                   </p>
                 </div>
               </div>
