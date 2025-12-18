@@ -122,30 +122,6 @@ python app.py
 ```
 Server runs at `http://127.0.0.1:5000`
 
-#### Step 4: Open Dashboard    # Flask backend (optional, for local dev)
-├── data_generator.py               # Dataset generator (calibrated to WHO GHED)
-├── ph_hospitals.csv                # Real PhilHealth facilities
-├── ph_national_trends.csv          # World Bank OOP data (1999-2022)
-├── DATA_SOURCES.md                 # Detailed data documentation
-├── README.md                       # This file
-└── docs/                           # GitHub Pages deployment folder
-    ├── index.html                  # Main dashboard
-    ├── script.js                   # Chart logic & data handling
-    ├── style.css                   # Responsive styling
-    ├── ghed_tidy.csv              # WHO GHED dataset (150x5 requirement) ⭐
-    └── ph_healthcare_data.csv     # 300 calibrated patient records
-└── docs/
-    ├── index.html              # Main dashboard
-   ├── ghed_tidy.csv            # WHO GHED-derived tidy indicators (macro-level)
-    ├── script.js               # Chart logic & data handling
-  WHO GHED dataset (5 columns × 193 rows) meets rubric requirement  
-✓ Disease distribution matches PSA 2024 mortality statistics  
-✓ Regional density reflects actual healthcare infrastructure  
-✓ Private hospitals show realistic cost premium (+30%)  
-✓ PhilHealth case rates from official 2024 circular  
-✓ Patient records calibrated to WHO GHED OOP target (44.4%)  
-✓ All data sources have clickable attribution links in footer
-
 ## Live Demo
 🔗 **GitHub Pages:** (https://codewithhyper.github.io/PhilPocket/)
 
