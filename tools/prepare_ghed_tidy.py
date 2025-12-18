@@ -7,8 +7,6 @@ DOCS_DIR = WORKSPACE_ROOT / "docs"
 INPUT_CSV = DOCS_DIR / "ghed_data.csv"
 OUTPUT_CSV = DOCS_DIR / "ghed_tidy.csv"
 
-# Pick a small set of high-signal GHED metrics.
-# This keeps the tidy dataset compact while exceeding the rubric's 150-row minimum.
 METRICS: dict[str, str] = {
 	"oops_che": "Out-of-pocket share of current health expenditure (%)",
 	"oop_pc_usd": "Out-of-pocket per capita (USD)",
